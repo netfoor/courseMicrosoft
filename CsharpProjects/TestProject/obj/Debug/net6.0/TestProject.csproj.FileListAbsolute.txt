@@ -1,0 +1,15 @@
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/bin/Debug/net6.0/TestProject
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/bin/Debug/net6.0/TestProject.deps.json
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/bin/Debug/net6.0/TestProject.runtimeconfig.json
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/bin/Debug/net6.0/TestProject.dll
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/bin/Debug/net6.0/TestProject.pdb
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.AssemblyInfoInputs.cache
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.AssemblyInfo.cs
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.dll
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/refint/TestProject.dll
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.pdb
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/TestProject.genruntimeconfig.cache
+/Users/For/Desktop/csharpMicrosoft/CsharpProjects/TestProject/obj/Debug/net6.0/ref/TestProject.dll
