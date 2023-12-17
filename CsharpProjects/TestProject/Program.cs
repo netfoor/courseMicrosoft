@@ -1,7 +1,10 @@
-﻿Random dice = new Random(); 
-int roll1 = dice.Next(1,7);
-Console.WriteLine(roll1);
-
+﻿// Ejercicio de dados
+ 
 Random dice = new Random(); 
-int roll = dice.Next(); 
-Console.WriteLine(roll); 
+int rollOne = dice.Next();
+int rollTwo = dice.Next(101); 
+int rollThree = dice.Next(50, 101);
+
+Console.WriteLine($"First roll: {rollOne}");
+Console.WriteLine($"Second roll: {rollTwo}"); 
+Console.WriteLine($"Thrird roll: {rollThree}");
