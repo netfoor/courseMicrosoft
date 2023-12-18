@@ -28,7 +28,7 @@ if (message.Contains("fox")){
     Console.WriteLine("What does the fox say?"); 
 }
 
-*/
+
 // Lanzamiento de 3 dados
 
 Random dice = new Random(); 
@@ -51,9 +51,41 @@ if (rollOne == rollTwo || rollOne == rollThree || rollTwo == rollThree){
 }
 }
 
-if (total >= 15){
-    Console.WriteLine("You win!!");
+if ( total >= 16 ){
+    Console.WriteLine("You win a new car!"); 
+} else if ( total >= 10 ){
+    Console.WriteLine("You win a new laptop!"); 
+} else if ( total == 7){
+    Console.WriteLine("You win a trip for two"); 
 } else {
-    Console.WriteLine("Sorry, you lose."); 
+    Console.WriteLine("You win a kitten"); 
+}
+*/
+
+// Mejora de la tasa de renovación de las suscripciones
+
+Random random = new Random(); 
+//int dayUntilExpiration = random.Next(12);
+int dayUntilExpiration = random.Next(12);
+int discountPercentaje = 0; 
+
+if (dayUntilExpiration == 0) {
+    Console.WriteLine("Your subscription has expired."); 
+} else if (dayUntilExpiration == 1){
+    discountPercentaje += 20;
+    Console.WriteLine($"Your subscription expires within a day\nRenew now and save {discountPercentaje}%!");
+} else if (dayUntilExpiration <= 5){
+    discountPercentaje += 10;
+    Console.WriteLine($"Your subcription expires in {dayUntilExpiration} days. \nRenew now and save {discountPercentaje}%");
+} else if (dayUntilExpiration <= 10){
+    Console.WriteLine("Your subcription will expire soon. Renew now!");
+} else {
+    Console.WriteLine(); 
 }
 
+// Condiciones para verificar que se aplica correctamente los descuentos
+if (dayUntilExpiration <= 5 && dayUntilExpiration > 1){
+    Console.WriteLine("Se debe ofrecer un descuento de 10%"); 
+} else if (dayUntilExpiration == 1){
+    Console.WriteLine("Se debe ofrecer un descuento de 20%"); 
+}
