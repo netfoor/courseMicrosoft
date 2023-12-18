@@ -60,7 +60,7 @@ if ( total >= 16 ){
 } else {
     Console.WriteLine("You win a kitten"); 
 }
-*/
+
 
 // Mejora de la tasa de renovación de las suscripciones
 
@@ -83,9 +83,60 @@ if (dayUntilExpiration == 0) {
     Console.WriteLine(); 
 }
 
-// Condiciones para verificar que se aplica correctamente los descuentos
-if (dayUntilExpiration <= 5 && dayUntilExpiration > 1){
-    Console.WriteLine("Se debe ofrecer un descuento de 10%"); 
-} else if (dayUntilExpiration == 1){
-    Console.WriteLine("Se debe ofrecer un descuento de 20%"); 
+
+// Haciendo uso de las matrices en c# 
+string [] fraudelentOrderIDs = new string[3]; 
+fraudelentOrderIDs[0] = "A123";
+fraudelentOrderIDs[1] = "B456"; 
+fraudelentOrderIDs[2] = "C789";  
+//fraudelentOrderIDs[3] = "This is a test"; 
+
+
+
+string [] fraudelentOrderIDs = {"A123", "B456", "C789"};
+Console.WriteLine($"First: {fraudelentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudelentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudelentOrderIDs[2]}"); 
+
+fraudelentOrderIDs[0] = "F000"; 
+
+Console.WriteLine($"Reassign First: {fraudelentOrderIDs[0]}"); 
+Console.WriteLine($"There are {fraudelentOrderIDs.Length} fraudalent orders to process.");
+
+//Arrays 
+string [] names = {"Carolina", "Fortino", "Daniela"}; 
+foreach (string name in names){
+    Console.WriteLine(name); 
 }
+//Desafío de pedido fraudulento
+int [] inventory = {200, 450, 700, 175, 250};
+int sum = 0; 
+int biin = 0; 
+foreach (int items in inventory){
+    sum += items; 
+    biin++; 
+    Console.WriteLine($"Bin {biin} = {items} items (running total: {sum})");
+}
+Console.WriteLine($"Wew have {sum} items in inventory."); 
+*/
+
+// Notificar los identificadores de pedido que necesitan una investigación más detallada
+
+string [] inventory = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+
+int bin = 0; 
+List<string> newList = new List<string>();
+
+foreach (string fraudelentOrderIDs in inventory){
+    
+    if (fraudelentOrderIDs.StartsWith("B")){
+        newList.Add(fraudelentOrderIDs); 
+        bin ++;
+    }
+    
+}
+Console.WriteLine($"Usted necesita revisar los siguientes {bin} archivos: ");
+foreach (string OtherList in newList){
+    Console.WriteLine(OtherList); 
+}
+  
