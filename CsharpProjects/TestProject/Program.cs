@@ -160,3 +160,25 @@ foreach ( var orderID in orderIDs ){
 }
 */
 
+//Aplicación de directrices de estilo para mejorar la legibilidad
+//El propósito de nivel superior de este código es invertir una cadena y contar el número de veces que aparece un carácter determinado.
+
+string orderedMessage = "The quick brown fox jumps over the lazy dog.";
+
+char[] message = orderedMessage.ToCharArray();
+Array.Reverse(message);
+
+string newMessage = new String(message);
+
+int presenceOfTheLetter = 0;
+
+foreach (char letter in message) 
+{ 
+    if (letter == 'o') 
+    { 
+        presenceOfTheLetter++; 
+    } 
+}
+
+Console.WriteLine(newMessage);
+Console.WriteLine($"The letter 'o' appears {presenceOfTheLetter} times in the text.");
