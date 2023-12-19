@@ -29,26 +29,31 @@ if (message.Contains("fox")){
 }
 
 
-// Lanzamiento de 3 dados
+// Lanzamiento de 3 dados y ejemplo de códico limpio según Microsoft
 
 Random dice = new Random(); 
-int rollOne = dice.Next(1,7);
-int rollTwo = dice.Next(1,7);
-int rollThree = dice.Next(1,7);
-int total = rollOne + rollTwo + rollThree; 
 
-Console.WriteLine($"Dice roll: {rollOne}, {rollTwo}, {rollThree} = {total}"); 
+int rollOne = dice.Next(1, 7);
+int rollTwo = dice.Next(1, 7);
+int rollThree = dice.Next(1, 7);
 
-if (rollOne == rollTwo || rollOne == rollThree || rollTwo == rollThree){
-    if (rollOne == rollTwo && rollTwo == rollThree){
-    Console.WriteLine("You rolled triples!! +6 bonus to total");
-    total += 6; 
-    Console.WriteLine(total);  
-} else {
-    Console.WriteLine("You rolled doubles!! +2 bonus to total");
-    total += 2;
-    Console.WriteLine(total);   
-}
+int total = rollOne + rollTwo + rollThree;
+Console.WriteLine($"Dice roll: {rollOne} + {rollTwo} + {rollThree} = {total}"); 
+
+if ((rollOne == rollTwo) || (rollOne == rollThree) || (rollTwo == rollThree))
+{
+    if ((rollOne == rollTwo) && (rollTwo == rollThree))
+    {
+        Console.WriteLine("You rolled triples!! +6 bonus to total");
+        total += 6; 
+        Console.WriteLine(total);  
+    } 
+    else 
+    {
+        Console.WriteLine("You rolled doubles!! +2 bonus to total");
+        total += 2;
+        Console.WriteLine(total);   
+    }
 }
 
 if ( total >= 16 ){
@@ -118,8 +123,6 @@ foreach (int items in inventory){
     Console.WriteLine($"Bin {biin} = {items} items (running total: {sum})");
 }
 Console.WriteLine($"Wew have {sum} items in inventory."); 
-*/
-
 // Notificar los identificadores de pedido que necesitan una investigación más detallada
 
 string [] inventory = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
@@ -139,4 +142,21 @@ Console.WriteLine($"Usted necesita revisar los siguientes {bin} archivos: ");
 foreach (string OtherList in newList){
     Console.WriteLine(OtherList); 
 }
-  
+
+
+Random random = new Random(); 
+string[] orderIDs = new string[5]; 
+
+for (int i = 0; i < orderIDs.Length; i++){
+    int prefixValue = random.Next(65, 70); 
+    string prefix = Convert.ToChar(prefixValue).ToString(); 
+    string suffix = random.Next(1, 1000).ToString();
+    orderIDs[i] = prefix + suffix;
+}
+
+//Print out each orderID 
+foreach ( var orderID in orderIDs ){
+    Console.WriteLine(orderID); 
+}
+*/
+
