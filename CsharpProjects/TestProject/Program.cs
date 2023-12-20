@@ -158,7 +158,6 @@ for (int i = 0; i < orderIDs.Length; i++){
 foreach ( var orderID in orderIDs ){
     Console.WriteLine(orderID); 
 }
-*/
 
 //Aplicación de directrices de estilo para mejorar la legibilidad
 //El propósito de nivel superior de este código es invertir una cadena y contar el número de veces que aparece un carácter determinado.
@@ -182,3 +181,41 @@ foreach (char letter in message)
 
 Console.WriteLine(newMessage);
 Console.WriteLine($"The letter 'o' appears {presenceOfTheLetter} times in the text.");
+*/
+
+//Student Grading
+
+using System;
+
+int currentAssignments = 5;
+
+int [] sophiaScores = new int[] {90, 86, 87, 98, 100};
+int [] andrewScores = new int[] {92, 89, 81, 96, 90};
+int [] emmaScores = new int[] {90, 85, 87, 98, 68}; 
+int [] loganScores = new int[] {90, 95, 87, 88, 96};
+
+string [] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan"}; 
+
+foreach (string name in studentNames)
+{
+    if (name == "Sophia")
+    {
+    
+        int sophiaSum = 0;
+        decimal sophiaScore;
+
+        foreach (int score in sophiaScores)
+        {
+            sophiaSum += score;
+        }
+
+        sophiaScore = (decimal)sophiaSum / currentAssignments;
+
+        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+
+    }
+}
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
