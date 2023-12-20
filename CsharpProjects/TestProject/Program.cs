@@ -196,25 +196,34 @@ int [] loganScores = new int[] {90, 95, 87, 88, 96};
 
 string [] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan"}; 
 
+int [] studentScore = new int[10];
+        
+Console.WriteLine("Student\t\tGrade\n");
+
 foreach (string name in studentNames)
 {
-    if (name == "Sophia")
+    string currentStudent = name;
+
+    if (currentStudent == "Sophia")
+        studentScore = sophiaScores; 
+    else if (currentStudent == "Andrew")
+        studentScore = andrewScores; 
+    else if (currentStudent == "Emma")
+        studentScore = emmaScores;
+    else if (currentStudent == "Logan")
+        studentScore = loganScores; 
+
+    int sumAssignmentScore = 0;
+    decimal currentStudentGrade = 0;
+
+    foreach (int score in studentScore)
     {
-    
-        int sophiaSum = 0;
-        decimal sophiaScore;
-
-        foreach (int score in sophiaScores)
-        {
-            sophiaSum += score;
-        }
-
-        sophiaScore = (decimal)sophiaSum / currentAssignments;
-
-        Console.WriteLine("Student\t\tGrade\n");
-        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-
+        sumAssignmentScore += score;
     }
+
+    currentStudentGrade = (decimal)sumAssignmentScore / currentAssignments;
+
+    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t?");
 }
 
 Console.WriteLine("Press the Enter key to continue");
