@@ -291,7 +291,7 @@ foreach (string name in studentNames)
 
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine();
-*/
+
 //Reto propuesto
 int examAssignments = 5;
 
@@ -410,3 +410,57 @@ foreach (string name in studentNames)
 Console.WriteLine("\n\rPress the Enter key to continue");
 Console.ReadLine();
 
+
+// Expresiones booleanas
+
+string value1 = " a"; 
+string value2 = "A "; 
+Console.WriteLine(value1.Trim().ToLower() ==  value2.Trim().ToLower()); 
+
+
+Console.WriteLine("a" != "a");
+Console.WriteLine("a" != "A");
+Console.WriteLine(1 != 2);
+
+string myValue = "a"; 
+Console.WriteLine(myValue != "a");
+
+
+Console.WriteLine(1 > 2);//False
+Console.WriteLine(1 < 2);//true
+Console.WriteLine(1 >= 1);// true
+Console.WriteLine(1 <= 1);//true 
+
+string pangram = "The quick brown fox jumps over the lazy dog.";
+Console.WriteLine(pangram.Contains("fox"));
+Console.WriteLine(pangram.Contains("cow"));
+
+
+int saleAmount = 999; 
+
+int discount = saleAmount > 1000 ? 100: 50;
+Console.WriteLine($"Discount: {discount}");
+
+
+//Reto heads or tails 
+
+Random possibility = new Random();
+int affair = possibility.Next(1, 2); 
+Console.WriteLine((affair == 1) ? "heands" : "tails"); 
+
+string permission = "Admin|Manager";
+int level = 53; 
+
+if (permission.Contains("Admin"))
+{
+    Console.WriteLine((level > 55) ? "Welcome, Super Admin user." : "Welcome, Admin user");
+}
+else if (permission.Contains("Manager") && level > 20)
+{
+    Console.WriteLine("Contact an Admin for access");
+}
+else 
+{
+     Console.WriteLine("You dont have sufficient privileges.");
+}
+*/
